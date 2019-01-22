@@ -1,0 +1,46 @@
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container > div {
+    background-color: rgb(0, 255, 255);
+    font-size: 20px;
+    margin: 15px;
+    border: 3px solid rgb(8, 72, 114);
+    padding: 10px 10px 50px 10px;
+    width: 200px;
+    height: 150px;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-align: justify; 
+    position: relative; 
+
+}
+
+.container > div:hover {
+    background-color: cyan;
+    font-size: 30px;
+    margin: 20px;
+    border: 2px solid black;
+    padding: 15px;
+    width: 30%;
+    height: auto;
+    overflow: visible;
+}
+
+form {
+    background-color: sienna;
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+    overflow: hidden;
+    border: 4px inset brown;
+}
+
+textarea {
+    background-color: sienna;
+    border: none;
+    border-bottom: 2px solid white;
+}

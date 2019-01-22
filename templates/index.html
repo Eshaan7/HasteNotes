@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Your Notes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">    </head>
+    <body>
+        <div class="container">
+            {% for n in notes %}
+            <div>{{ n }}</div>
+            {% endfor %}
+            <form action="{{ url_for('index') }}" method="POST">
+                <textarea name="note" rows="7" cols="27" placeholder="Enter note..."></textarea>
+                <button>Add note</button>
+            </form>
+        </div>
+    </body>
+</html>
