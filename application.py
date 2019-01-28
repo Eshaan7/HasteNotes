@@ -1,23 +1,23 @@
-from flask import Flask, render_template, request, session
-from flask_session import Session
+import os
+
+from flask import Flask, render_template
+from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
+socketio = SocketIO(app)
 
-app.config["SESSION_PERMANENT"] = False
-app.config["SESSION_TYPE"] = "filesystem"
-Session(app)
+Notes = []
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
-	if session.get("notes") is None:
-		session["notes"] = []
-	n = ''
-	if request.method == 'POST':
-		n = request.form.get('note')
-		if n:
-			session["notes"].append(n)
-	return render_template('index.html', notes=session["notes"])
+	return render_template("index.html", notes=Notes)
 
+@socketio.on("submit note")
+def sendnote(data):
+	Notes.append(data['text'])
+	lastNote = Notes[-1]
+	emit("all notes", lastNote, broadcast=True)
 
 if __name__=='__main__': 
     app.run(debug = True) 
