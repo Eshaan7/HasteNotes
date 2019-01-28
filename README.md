@@ -1,4 +1,3 @@
-# HasteNotes
+# ShareNotesOnHaste
 
-https://hastenotes.herokuapp.com/
-# ShareNotes
+https://sharenotesonhaste.herokuapp.com/
