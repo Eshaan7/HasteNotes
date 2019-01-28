@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     </head>
     <body>
-        <div id="container">
+        <div id="container" action="{{ url_for('index') }} method="GET">
             <form action="{{ url_for('index') }}" method="POST">
                 <textarea id="new-note" name="note" rows="5" draggable="false" placeholder="Enter Note..."></textarea>
                 <button class="btn btn-dark" id="submit">Add note</button>
