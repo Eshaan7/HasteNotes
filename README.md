@@ -1,3 +1,3 @@
 # HasteNotes
 
-https://hastenote.herokuapp.com/
+https://hastenotes.herokuapp.com/
