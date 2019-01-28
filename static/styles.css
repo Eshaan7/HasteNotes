@@ -50,8 +50,8 @@ textarea, textarea:focus {
     resize: none;
 }
 
-a, .close {
-  font-family: sans-serif;
+.close {
+  font-family: monospace;
   position: absolute;
   right: 8px;
   top: 3px;
