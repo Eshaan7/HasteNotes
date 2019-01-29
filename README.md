@@ -1,6 +1,6 @@
 # ShareNotesOnHaste
 
-https://sharenotesonhaste.herokuapp.com/
+https://hastenotes.herokuapp.com/
 
 ## TODO list
 
